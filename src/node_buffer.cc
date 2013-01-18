@@ -31,6 +31,11 @@
 #include <float.h>  // float limits
 #include <math.h>   // infinity
 
+// Windows does not define INFINITY in math.h
+#ifndef INFINITY
+# define INFINITY HUGE_VALF
+#endif
+
 #define MIN(a,b) ((a) < (b) ? (a) : (b))
 
 #define BUFFER_CLASS_ID (0xBABE)
